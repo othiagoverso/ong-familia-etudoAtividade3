@@ -1,3 +1,5 @@
-sistema de Single Page Application (SPA) básico;
-sistema de templates JavaScript.
-Sistema de verificação de consistência de dados em formulários, com aviso ao usuário de preenchimento incorreto.
+git checkout -b develop
+git checkout -b feature/spa
+git add .
+git commit -m "feat: implementa sistema SPA e validação de formulário"
+git push origin feature/spa
