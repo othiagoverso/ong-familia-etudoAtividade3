@@ -1,0 +1,20 @@
+
+/* ================================
+   COMPONENTS.CSS — UI Components
+   ================================ */
+
+/* Nav composition */
+.navbar-actions { display:flex; gap: var(--space-2); }
+
+/* Service tags row */
+.service-tags { display:flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+
+/* Utilities for components (local) */
+.hidden { display: none !important; }
+.visible { display: block !important; }
+
+/* Form feedback mini components */
+.inline { display: inline-flex; gap: 8px; align-items: center; }
+.success-text { color: var(--color-accent); }
+.error-text { color: var(--color-danger); }
+.info-text { color: var(--color-info); }

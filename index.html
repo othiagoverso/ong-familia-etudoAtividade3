@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Serviços de apoio à família: orientação parental, mediação de conflitos, terapia de casal e grupos de apoio." />
+  <title>Início · ONG A FAMÍLIA É TUDO</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topbar">
+  <div class="container bar">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Logo ONG A FAMÍLIA É TUDO" width="36" height="36"/>
+      <span>ONG A FAMÍLIA É TUDO</span>
+    </a>
+
+    <!-- Desktop nav with dropdown -->
+    <nav class="nav" aria-label="Menu principal">
+      <a class="active" href="index.html" aria-current="page">Home</a>
+
+      <div class="menu" id="menu-servicos">
+        <button aria-expanded="false" aria-controls="painel-servicos">Serviços ▾</button>
+        <div class="menu-panel" id="painel-servicos" role="menu">
+          <a href="#terapia" role="menuitem">Terapia de Casal</a>
+          <a href="#mediação" role="menuitem">Mediação de Conflitos</a>
+          <a href="#grupos" role="menuitem">Grupos de Apoio</a>
+        </div>
+      </div>
+
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button class="hamburger" id="btn-hamburger" aria-label="Abrir menu">☰</button>
+    <a class="phone" href="tel:+551140028922">(11) 4002-8922</a>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<nav class="mobile-drawer" id="mobile-drawer" aria-label="Menu móvel">
+  <div class="container">
+    <a class="active" href="index.html">Home</a>
+    <details>
+      <summary>Serviços</summary>
+      <a href="#terapia">Terapia de Casal</a><br/>
+      <a href="#mediação">Mediação de Conflitos</a><br/>
+      <a href="#grupos">Grupos de Apoio</a>
+    </details>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<main id="conteudo">
+  <section class="hero hero-solid">
+    <div class="container hero-content">
+      <h1>Você merece ser feliz!</h1>
+      <p class="max-w-prose">Apoio psicológico e social com foco em <strong>família</strong>: pais, crianças, casais e cuidadores.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contato">Fale com a equipe</a>
+        <a class="btn outline" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-contact" id="contato">
+    <form class="container qc-grid" id="form-rapido" novalidate>
+      <h2 class="qc-title">Contato Rápido!</h2>
+      <input class="input" type="text" name="nome" placeholder="Nome completo *" required minlength="3"/>
+      <input class="input" type="tel" name="whats" placeholder="WhatsApp (11) 98888-7777 *" required pattern="\(\d{2}\) \d{4,5}-\d{4}" />
+      <button class="btn">Solicitar Contato</button>
+      <p class="form-error" id="erro-form">Por favor, verifique os campos obrigatórios.</p>
+    </form>
+  </section>
+
+  <section class="container services" id="servicos">
+    <div class="grid-12">
+      <div class="col-span-12">
+        <h2>Serviços para a família</h2>
+        <p class="lead max-w-prose">Atendimento acolhedor com foco em relações familiares saudáveis e bem-estar emocional.</p>
+      </div>
+
+      <!-- Cards responsivos (usam grid e flex internos) -->
+      <article class="card col-span-4" id="terapia">
+        <div class="icon" aria-hidden="true">💞</div>
+        <h3>Terapia de casal</h3>
+        <p>Comunicação não violenta, acordos e reconstrução de confiança.</p>
+        <div class="service-tags">
+          <span class="tag info">casal</span>
+          <span class="tag success">CNV</span>
+          <span class="tag warn">mediação</span>
+        </div>
+      </article>
+
+      <article class="card col-span-4" id="mediação">
+        <div class="icon" aria-hidden="true">🤝</div>
+        <h3>Mediação de conflitos familiares</h3>
+        <p>Escuta ativa e soluções conjuntas para relações mais leves.</p>
+        <div class="service-tags">
+          <span class="tag">família</span>
+          <span class="tag info">orientação</span>
+        </div>
+      </article>
+
+      <article class="card col-span-4" id="grupos">
+        <div class="icon" aria-hidden="true">👥</div>
+        <h3>Grupos de apoio</h3>
+        <p>Encontros temáticos com mediação de profissionais.</p>
+        <div class="service-tags">
+          <span class="tag success">adolescentes</span>
+          <span class="tag">pais</span>
+          <span class="tag danger">prevenção</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="cta-row">
+      <button class="btn outline" id="btn-open-modal">Ver aviso</button>
+      <a class="btn" href="#contato">Fale Conosco</a>
+    </div>
+  </section>
+
+  <section class="container mt-4">
+    <div class="alert info">
+      <strong>Informação:</strong>
+      <span>Atendimentos sociais com vagas limitadas — inscreva-se no formulário.</span>
+    </div>
+  </section>
+
+  <!-- Modal Component -->
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal" role="document" aria-labelledby="modal-title">
+      <header>
+        <h3 id="modal-title">Aviso importante</h3>
+        <button class="close" id="btn-close-modal" aria-label="Fechar">×</button>
+      </header>
+      <p>Os atendimentos gratuitos acontecem às quartas-feiras, mediante triagem.</p>
+      <div class="mt-2 text-right">
+        <button class="btn outline" id="btn-ok-modal">Entendi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Solicitação enviada com sucesso!</div>
+
+</main>
+
+<footer class="footer">
+  <div class="container foot">
+    <small>© ONG A FAMÍLIA É TUDO</small>
+    <small>Rua Solidária, 123 · São Paulo/SP</small>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
